@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chainreaction"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name=".MainScreen"
+            android:label="Chain Reaction"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".Achievements"
+            android:label="Achievements"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ArcadeGame"
+            android:label="Arcade Game"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ArcadeGameEasy"
+            android:label="Arcade Game Easy"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ArcadeGameHard"
+            android:label="Arcade Game Hard"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ArcadeGameMedium"
+            android:label="Arcade Game Medium"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ArcadeGameMenu"
+            android:label="Arcade Game Menu"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ArcadeGameOlympic"
+            android:label="Arcade Game Olympic"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".CustomGame"
+            android:label="Custom Game"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".GameActivity"
+            android:label="Game Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".GameMenu"
+            android:label="Game Menu"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".Pause"
+            android:label="Pause"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".Play"
+            android:label="Play"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".PuzzleGame"
+            android:label="Puzzle Game"
+            android:screenOrientation="portrait" >
+        </activity>
+
+      	<activity
+            android:name=".PuzzleGameEasy"
+            android:label="Puzzle Game Easy"
+            android:screenOrientation="portrait" >
+        </activity>
+
+		<activity
+            android:name=".PuzzleGameHard"
+            android:label="Puzzle Game Hard"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".PuzzleGameMedium"
+            android:label="Puzzle Game Menu"
+            android:screenOrientation="portrait" >
+        </activity>
+		
+        <activity
+            android:name=".PuzzleGameMenu"
+            android:label="Puzzle Game Menu"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".PuzzleGameOlympic"
+            android:label="Puzzle Game Olympic"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".Rules"
+            android:label="Rules"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ShopMenu"
+            android:label="Shop"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ShopScreenColors"
+            android:label="Shop Screen for Colors"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ShopScreenGeneric"
+            android:label="Shop Screen Generic"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+		<activity
+            android:name=".ShopScreenPowerups"
+            android:label="Powerups"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+    </application>
+
+</manifest>

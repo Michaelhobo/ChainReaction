@@ -1,0 +1,61 @@
+package com.chainreaction;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnMultiChoiceClickListener;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+
+public class Settings extends Activity
+{
+	private static final String SETTINGS = "Settings";
+	SharedPreferences prefs;
+	String[] listElements;
+	boolean[] settingsArray;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		prefs = getSharedPreferences(SETTINGS, 0);
+
+		listElements = new String[6];
+		listElements[0] = "Sound";
+		listElements[1] = "Yellow";
+		listElements[2] = "Red";
+		listElements[3] = "Green";
+		listElements[4] = "Black";
+		listElements[5] = "Hi";
+
+		settingsArray = new boolean[listElements.length];
+		createList();
+	}
+
+	private void createList()
+	{
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Settings");
+		builder.setCancelable(true);
+
+		for (int i = 0; i < settingsArray.length; i++)
+		{
+			boolean isChecked = prefs.getBoolean(listElements[i], false);
+			settingsArray[i] = isChecked;
+		}
+
+		builder.setMultiChoiceItems(listElements, settingsArray, new ListListener());
+		builder.show();    	
+	}
+
+	private class ListListener implements OnMultiChoiceClickListener
+	{
+		public void onClick(DialogInterface dialog, int position, boolean isChecked)
+		{
+			SharedPreferences.Editor editor = prefs.edit();
+			String iD = listElements[position];
+			editor.putBoolean(iD, isChecked);
+			editor.commit();
+		}
+	}
+}
